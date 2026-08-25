@@ -1,12 +1,60 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: RGBA(243,243,243,1);
+  --background-color-1:RGBA(251,251,251,1);
+  --background-color-2:RGBA(254,254,254,1);
+  /*--background-image:url('/app-background-light.png');
+  --background-repeat:repeat;*/
+  --foreground: RGBA(23,23,23,1);
+  --foreground-dim: color-mix(in srgb, var(--foreground), white 4%);
+  --shadow-color: RGBA(200,200,200,1);
+  --shadow: 2px 2px 5px 2px var(--shadow-color);
+  --h2-color: RGBA(146, 228, 0, 1);
+  --azure: RGBA(0, 127, 255, 1);
+  --green: RGBA(76, 187, 23, 1);
+  --red: RGBA(220, 53, 69, 1);
+  --background-shift--10: color-mix(in srgb, var(--background-color), white 4%);
+  --background-shift-10: color-mix(in srgb, var(--background-color), black 6%);
+  --background-shift-20: color-mix(in srgb, var(--background-color), black 10%);
+  --background-shift-30: color-mix(in srgb, var(--background-color), black 14%);
+  --background-shift-40: color-mix(in srgb, var(--background-color), black 16%);
+  --background-shift-50: color-mix(in srgb, var(--background-color), black 20%);
+  --background-shift-60: color-mix(in srgb, var(--background-color), black 24%);
+  --background-shift-70: color-mix(in srgb, var(--background-color), black 28%);
+  --background-shift-80: color-mix(in srgb, var(--background-color), black 32%);
+  --card-title-color: rgb(90, 90, 90);
+  --card-border-color: RGBA(204,204,204,1);
+  --card-border-width: 1px;
+  --purple: RGBA(113, 96, 232, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background-color: RGBA(32, 32, 32, 1);
+    --background-color-1:RGBA(43,43,43,1);
+    --background-color-2:RGBA(55,55,55,1);
+    /*--background-image:url('/blazor_background.png');
+    --background-repeat:repeat;*/
+    --foreground: RGBA(224,224,224,1);
+    --foreground-dim: color-mix(in srgb, var(--foreground), black 4%);
+    --shadow-color: RGBA(20,20,20,1);
+    --shadow: 2px 2px 5px 2px var(--shadow-color);
+    --h2-color: RGBA(146, 228, 146, 1);
+    --azure: RGBA(0, 127, 255, 1);
+    --green: RGBA(76, 187, 23, 1);
+    --red: RGBA(220, 53, 69, 1);
+    --background-shift--10: color-mix(in srgb, var(--background-color), black 4%);
+    --background-shift-10: color-mix(in srgb, var(--background-color), white 4%);
+    --background-shift-20: color-mix(in srgb, var(--background-color), white 8%);
+    --background-shift-30: color-mix(in srgb, var(--background-color), white 12%);
+    --background-shift-40: color-mix(in srgb, var(--background-color), white 16%);
+    --background-shift-50: color-mix(in srgb, var(--background-color), white 20%);
+    --background-shift-60: color-mix(in srgb, var(--background-color), white 24%);
+    --background-shift-70: color-mix(in srgb, var(--background-color), white 28%);
+    --background-shift-80: color-mix(in srgb, var(--background-color), white 32%);
+    --card-title-color: RGBA(198, 198, 198, 1);
+    --card-border-color: RGBA(70, 70, 70,1);
+    --card-border-width: 1.5px;
+    --purple: RGBA(113, 96, 232, 1);
   }
 }
 
@@ -25,8 +73,10 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  font-family:
+    Nunito, "Lato Regular", "Segoe UI", "Open Sans", Arial, Helvetica,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -38,7 +88,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--azure);
   text-decoration: none;
 }
 
@@ -46,4 +96,231 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  font-weight: 400;
+  color: var(--foreground);
+}
+
+h1.AppHeaderTitle {
+  font-size: 1.5em;
+  line-height: 64px;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+  color: var(--green);
+}
+
+h4 {
+  font-weight: 400;
+  color: var(--foreground);
+}
+
+h5{
+  font-weight:600;
+  vertical-align:middle !important;
+  margin-top:32px;
+}
+
+hr.gradient {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right,
+      rgb(113, 96, 232) 0%,
+      rgb(113, 96, 232) 20%,
+      rgb(76, 187, 23) 50%,
+      rgb(113, 96, 232) 80%,
+      rgb(113, 96, 232) 100%);
+}
+
+.text-red {
+  color: RGBA(227, 66, 52, 1);
+}
+
+.text-orange {
+  color: RGBA(255, 128, 0, .75)
+}
+
+.text-subdued {
+  color: var(--foreground-dim)
+}
+
+.color-deep-purple{
+  color:rgb(113,96,232);
+}
+
+.color-kelly-green{
+  color:rgb(76,187,23);
+}
+
+.azure {
+  color: var(--azure);
+}
+
+.solid-bg {
+  background-color: var(--background-shift-10);
+}
+
+p.subtitle {
+  font-weight: 500;
+  color: var(--foreground-dim);
+}
+
+dt {
+  font-weight: 600;
+  color: var(--foreground)
+}
+
+dd {
+  font-weight: 400;
+  color: var(--foreground-dim);
+}
+
+.level_2 {
+  color: var(--foreground-dim);
+}
+
+.hero {
+  border-radius: .25em;
+  border-color: dimgray;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: 0 0 4px 2px var(--shadow-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--foreground-dim) !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: var(--bs-breadcrumb-divider, "/");
+  color: var(--foreground);
+}
+
+.button-pill-primary {
+  /*border-color: var(--foreground-dim);
+  border-width:1.35px;
+  border-style:solid;
+  border-radius:1em;*/
+  min-width: 3em;
+  display: inline-block;
+  text-align: center;
+}
+
+.bg-10 {
+  background-color: var(--background-shift-10)
+}
+
+.bg-20 {
+  background-color: var(--background-shift-20)
+}
+
+.bg-30 {
+  background-color: var(--background-shift-30)
+}
+
+.bg-40 {
+  background-color: var(--background-shift-40)
+}
+
+.bg-50 {
+  background-color: var(--background-shift-50)
+}
+
+.bg-60 {
+  background-color: var(--background-shift-60)
+}
+
+.bg-70 {
+  background-color: var(--background-shift-70)
+}
+
+.bg-80 {
+  background-color: var(--background-shift-80)
+}
+
+.header-bg {
+  background-color:var(--background-color-2);
+  /*background: linear-gradient(to bottom, var(--background-shift-20) 0%, var(--background-color) 50%, var(--background-shift-20) 100%);*/
+  border-bottom: 1px solid var(--background-shift-20);
+}
+
+.hawk-card{ /* container for subordinate content */
+  background-color: var(--background-color-1);
+  border-width:var(--card-border-width);
+  border-color:var(--card-border-color);
+  border-style:solid;
+  border-radius: .25em;
+  /*box-shadow: 2px 2px 5px 2px var(--shadow-color);*/
+}
+
+.hawk-card-banner{ /* for a row */
+  border-bottom:1px solid var(--card-border-color);
+}
+
+.hawk-card-body{ /* for a row */
+  padding:4px;
+}
+
+.hawk-card-text{ /* for a col */
+  font-size:1em;
+  color:var(--foreground);
+}
+
+.hawk-card-footer{ /* for a row */
+  border-top:1px solid var(--card-border-color);
+  text-align:end;
+  padding:1em;
+}
+
+input[type]{
+  background-color:var(--background-color-2);
+  color:var(--foreground-dim);
+  border-radius:.25em;
+  border:1px solid var(--card-border-color);
+  border-bottom:2px solid rgb(193,142,241)
+}
+
+input[type]:focus{
+  background-color:var(--background-shift--10);
+  color:var(--foreground);
+  
+}
+
+input[type]::placeholder {
+  color:dimgray
+}
+
+.form-error{
+  color:var(--red);
+}
+
+form{
+  background-color:var(--background-color-1);
+  box-shadow: 0 0 4px 2px var(--shadow-color);
+  border:1px solid var(--card-border-color);
+  border-radius:.25em;
+}
+
+.btn-submit{
+  border-radius:.25em;
+  color:var(--green);
+}
+
+.btn-cancel{
+  border-radius:.25em;
+  color:var(--foreground-dim);
+}
+
+.superscript {
+  vertical-align: super;
+  font-size: 0.75em;
+  line-height: 0;
+  color: rgb(76,187,23);
 }
