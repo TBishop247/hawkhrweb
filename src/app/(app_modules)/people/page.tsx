@@ -265,6 +265,19 @@ export default function ShowPeople() {
           </div>
         </div>
 
+        <div className="row">
+          <div className="col ps-4">
+            <h4>&rsaquo; Brandable </h4>
+          </div>
+        </div>
+        <div className="row mb-3">
+          <div className="col">
+            <div className="px-4 text-subdued">
+              If desired, we can apply your company logo, fonts, and colors to the Hawk HR platform.
+            </div>
+          </div>
+        </div>
+
 
          
       </div>

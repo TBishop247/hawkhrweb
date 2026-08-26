@@ -28,7 +28,7 @@ export default function ModulePage() {
         </div>
         {/* /Breadcrumbs */}
 
-        <h2>Hawk HR Modules</h2>
+        <h2>Hawk Human Resources (HR) Modules</h2>
 
         {/* Introduction */}
         <div className="row">
@@ -61,7 +61,7 @@ export default function ModulePage() {
                   />
                 </div>
                 <div className="col">
-                  <h5>Hawk People</h5>
+                  <h5>People</h5>
                 </div>
               </div>
               <div className="row hawk-card-body">
@@ -99,7 +99,7 @@ export default function ModulePage() {
                     />
                   </div>
                   <div className="col">
-                    <h5 className="text-start">Hawk Benefits</h5>
+                    <h5 className="text-start">Benefits</h5>
                   </div>
               </div>
               <div className="row hawk-card-body">
@@ -136,7 +136,7 @@ export default function ModulePage() {
                     />
                   </div>
                   <div className="col">
-                    <h5>Hawk Recruiting</h5>
+                    <h5>Recruiting</h5>
                   </div>
               </div>
               <div className="row hawk-card-body">
@@ -173,7 +173,7 @@ export default function ModulePage() {
                   />
                 </div>
                 <div className="col text-center">
-                  <h5>Hawk Time &amp; Financials</h5>
+                  <h5>Time &amp; Financials</h5>
                 </div>
               </div>
               <div className="hawk-card-body">

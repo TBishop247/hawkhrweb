@@ -103,9 +103,9 @@ h1 {
   color: var(--foreground);
 }
 
-h1.AppHeaderTitle {
+.AppHeaderTitle {
   font-size: 1.5em;
-  line-height: 64px;
+
 }
 
 h2 {
@@ -324,3 +324,5 @@ form{
   line-height: 0;
   color: rgb(76,187,23);
 }
+
+.hidden{display: none;}

@@ -10,20 +10,20 @@ export default function AppHeader({ title }: AppHeaderProps) {
   return (
     <div className="container-fluid">
       <div className="row header-bg">
-        <div className="col-1 text-center">
+        <div className="col-auto text-center">
           <a href="/">
             <Image
               src="/hawk-in-flight-purple-green-filled.svg"
               alt="Next.js logo"
-              width={64}
-              height={64}
+              width={32}
+              height={32}
             />
           </a>
         </div>
         <div className="col-2">
-          <h1 className="AppHeaderTitle"><span className="color-deep-purple">Hawk</span> <span className="superscript">HR</span></h1>
+          <div className="AppHeaderTitle"><span className="color-deep-purple">Hawk</span> <span className="superscript">HR</span></div>
         </div>
-        <div className="col-9 text-end pt-3">
+        <div className="col text-end">
           <Image
             src="/avatar-purple-green.svg"
             alt="avatar"
