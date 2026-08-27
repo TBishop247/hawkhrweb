@@ -29,11 +29,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: RGBA(32, 32, 32, 1);
+    --background-color: RGBA(40,40,40, 1);
     --background-color-1:RGBA(43,43,43,1);
     --background-color-2:RGBA(55,55,55,1);
-    /*--background-image:url('/blazor_background.png');
-    --background-repeat:repeat;*/
+    --background-image:url('/dark-gradient-202020-2b2b2b.png');
+    --background-repeat:repeat-x;
     --foreground: RGBA(224,224,224,1);
     --foreground-dim: color-mix(in srgb, var(--foreground), black 4%);
     --shadow-color: RGBA(20,20,20,1);
@@ -52,8 +52,9 @@
     --background-shift-70: color-mix(in srgb, var(--background-color), white 28%);
     --background-shift-80: color-mix(in srgb, var(--background-color), white 32%);
     --card-title-color: RGBA(198, 198, 198, 1);
-    --card-border-color: RGBA(70, 70, 70,1);
+    --card-border-color: RGBA(101,101,101,1);
     --card-border-width: 1.5px;
+    --input-bg-color:RGB(63,63,63);
     --purple: RGBA(113, 96, 232, 1);
   }
 }
@@ -73,7 +74,9 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background-color: var(--background-color);
+  background-color: var(--background-color-1);
+  background-image: var(--background-image);
+  background-repeat: var(--background-repeat);
   font-family:
     Nunito, "Lato Regular", "Segoe UI", "Open Sans", Arial, Helvetica,
     sans-serif;
@@ -105,7 +108,7 @@ h1 {
 
 .AppHeaderTitle {
   font-size: 1.5em;
-
+  line-height: 2;
 }
 
 h2 {
@@ -280,17 +283,16 @@ dd {
 }
 
 input[type]{
-  background-color:var(--background-color-2);
+  background-color:var(--input-bg-color);
   color:var(--foreground-dim);
   border-radius:.25em;
   border:1px solid var(--card-border-color);
-  border-bottom:2px solid rgb(193,142,241)
+  border-top-width: 1.5px;
 }
 
 input[type]:focus{
   background-color:var(--background-shift--10);
-  color:var(--foreground);
-  
+  color:var(--foreground);  
 }
 
 input[type]::placeholder {
@@ -326,3 +328,43 @@ form{
 }
 
 .hidden{display: none;}
+
+.profile-menu{
+  border:1.4px solid var(--card-border-color);
+  border-radius:.25em;
+  right:30px;
+  top:43px;
+  position:absolute;
+  background-color:var(--background-shift-10)
+}
+
+.menu-item{
+  padding:8px;
+  background-color:rgba(0,0,0,0);
+}
+
+.menu-item:hover{
+  color:blue;
+  background-color:rgba(255,255,255,.1);
+}
+
+.menu-item-disabled{
+  color:dimgray;
+  padding:8px;
+  margin-top:1em;
+}
+
+.menu-item-disabled:hover{
+ background-color:rgba(255,255,255,0) !important;
+}
+
+.login-form{
+  border:1.4px solid var(--card-border-color);
+  border-radius:.25em;
+  height:270px;
+  width:500px;
+  left:calc(50% - 250px);
+  top:calc(50% - 135px);
+  position:absolute;
+  background-color:var(--background-shift-10)
+}

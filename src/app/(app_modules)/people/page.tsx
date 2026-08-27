@@ -4,12 +4,14 @@ import { Breadcrumb, BreadcrumbItem, Alert } from "react-bootstrap";
 import "@/app/globals.css";
 import AppHeader from "@/app/components/AppHeader";
 import AppFooter from "@/app/components/AppFooter";
+import UserAvatarMenu from "@/app/components/UserAvatarMenu";
 
 export default function ShowPeople() {
   return (
     <div>
       <header>
-        <AppHeader title="Hawk Human Resources" />
+        <UserAvatarMenu />
+        
       </header>
       <div className="container my-4">
         <div className="row">
