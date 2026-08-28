@@ -92,7 +92,7 @@ export default function ContactForm() {
             {/* Submit Button */}
             
             <Button variant="outline-secondary" type="submit" disabled={isPending} className="btn btn-submit">
-              <Image src="/paper-airplane-purple.svg" alt="Sen" height={24} width={24} className="me-2"/>
+              <Image src="/send.svg" alt="Sen" height={24} width={24} className="me-2"/>
               {isPending ? (
                 <>
                   <Spinner

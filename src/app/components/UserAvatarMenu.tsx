@@ -3,8 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Form, Button, Alert, Spinner} from "react-bootstrap";
-
+import { Form, Button, Alert, Spinner } from "react-bootstrap";
 
 export default function UserAvatarMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +28,7 @@ export default function UserAvatarMenu() {
         <div className="col-auto text-center">
           <a href="/">
             <Image
-              src="/hawk-in-flight-purple-green-filled.svg"
+              src="/hawk-in-flight.svg"
               alt="Next.js logo"
               width={48}
               height={48}
@@ -38,8 +37,8 @@ export default function UserAvatarMenu() {
         </div>
         <div className="col-2">
           <div className="AppHeaderTitle">
-            <span className="color-deep-purple">Hawk</span>{" "}
-            <span className="superscript">HR</span>
+            <span className="text-bright">Hawk</span>{" "}
+            <span className="superscript text-subdued">HR</span>
           </div>
         </div>
         <div className="col text-end" ref={menuRef}>
@@ -51,7 +50,7 @@ export default function UserAvatarMenu() {
             aria-haspopup="true"
           >
             <Image
-              src="/avatar-purple-green.svg" // Replace with your avatar path
+              src="/avatar.svg" // Replace with your avatar path
               alt="User Avatar"
               width={32}
               height={32}
@@ -71,7 +70,10 @@ export default function UserAvatarMenu() {
                     <Link
                       href="#"
                       role="menuitem"
-                      onClick={() => { setIsOpen(false); setShowForm(true) }}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setShowForm(true);
+                      }}
                     >
                       Client Login
                     </Link>
@@ -106,23 +108,40 @@ export default function UserAvatarMenu() {
             </div>
           )}
 
-          {showForm &&
-            <div >
-            <Form action="" noValidate className="login-form form p-3 text-start">
-              {/* Name Field */}
-              <Form.Group className="mb-3" controlId="formName">
-                <Form.Label>User Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="username"
-                  placeholder="Jane Doe"
+          {showForm && (
+            <div>
+              <Form
+                action=""
+                noValidate
+                className="login-form form p-3 text-start"
+              >
+                <div className="row m-0">
+                  <div className="col p-0 text-end">
+                    <Image
+                      src="/square-xmark.svg"
+                      alt="close"
+                      height={24}
+                      width={24}
+                      onClick={() => {
+                        setShowForm(false);
+                      }}
+                    />
+                  </div>
+                </div>
 
-                />
-                <Form.Control.Feedback type="invalid">
-                oops
-                </Form.Control.Feedback>
+                {/* Name Field */}
+                <Form.Group className="mb-3" controlId="formName">
+                  <Form.Label>User Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="username"
+                    placeholder="Jane Doe"
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    oops
+                  </Form.Control.Feedback>
                 </Form.Group>
-                
+
                 <Form.Group className="mb-3" controlId="formName">
                   <Form.Label>Password</Form.Label>
                   <Form.Control
@@ -135,8 +154,19 @@ export default function UserAvatarMenu() {
                   </Form.Control.Feedback>
                 </Form.Group>
                 <hr />
-                <Button variant="outline-secondary" type="submit" disabled={false} className="btn btn-submit">
-                  <Image src="/paper-airplane-purple.svg" alt="Sen" height={24} width={24} className="me-2" />
+                <Button
+                  variant="outline-secondary"
+                  type="submit"
+                  disabled={false}
+                  className="btn btn-submit"
+                >
+                  <Image
+                    src="/login.svg"
+                    alt="Sen"
+                    height={24}
+                    width={24}
+                    className="me-2"
+                  />
                   {0 ? (
                     <>
                       <Spinner
@@ -150,14 +180,12 @@ export default function UserAvatarMenu() {
                       Submitting...
                     </>
                   ) : (
-                    "Submit"
+                    "Log in"
                   )}
                 </Button>
               </Form>
-            
-            
-          </div>}  
-
+            </div>
+          )}
         </div>
       </div>
     </div>

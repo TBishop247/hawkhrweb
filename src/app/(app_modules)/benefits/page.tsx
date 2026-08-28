@@ -2,14 +2,14 @@ import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Breadcrumb, BreadcrumbItem, Alert } from "react-bootstrap";
 import "@/app/globals.css";
-import AppHeader from "@/app/components/AppHeader";
+import UserAvatarMenu from "@/app/components/UserAvatarMenu";
 import AppFooter from "@/app/components/AppFooter";
 
 export default function ShowBenefits() {
     return (
         <div>
             <header>
-                <AppHeader title="Hawk Human Resources" />
+                <UserAvatarMenu />
             </header>
             <div className="container my-4">
                 <div className="row">
@@ -28,7 +28,7 @@ export default function ShowBenefits() {
                 <div className="row mb-2">
                     <div className="col-auto">
                         <Image
-                            src="/shield-dollar-purple-green.svg"
+                            src="/shield-heart.svg"
                             alt="Hawk Benefits Icon"
                             height={50}
                             width={50}

@@ -30,7 +30,7 @@ export default function ShowPeople() {
         <div className="row mb-2">
           <div className="col-auto">
             <Image
-              src="/user-group-purple-green.svg"
+              src="/users.svg"
               alt="Hawk People Icon"
               height={50}
               width={50}

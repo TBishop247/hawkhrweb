@@ -2,7 +2,7 @@ import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Breadcrumb, BreadcrumbItem, Alert } from "react-bootstrap";
 import "@/app/globals.css";
-import AppHeader from "@/app/components/AppHeader";
+import UserAvatarMenu from "@/app/components/UserAvatarMenu";
 
 export default function ModulePage() {
 
@@ -11,7 +11,7 @@ export default function ModulePage() {
     <div>
       {/* Header */}
       <header>
-        <AppHeader title="Hawk HR" />
+        <UserAvatarMenu />
       </header>
       {/*Container */}
       <div className="container">
@@ -54,7 +54,7 @@ export default function ModulePage() {
               <div className="row hawk-card-banner">
                 <div className="col-auto">
                   <Image
-                    src="/user-group-purple-green.svg"
+                    src="/users.svg"
                     alt="user-group"
                     height={92}
                     width={92}
@@ -92,7 +92,7 @@ export default function ModulePage() {
               <div className="row hawk-card-banner">
                   <div className="col-auto ">
                     <Image
-                      src="/shield-dollar-purple-green.svg"
+                      src="/shield-heart.svg"
                       alt="user-group"
                       height={92}
                       width={92}
@@ -129,7 +129,7 @@ export default function ModulePage() {
                 <div className="row hawk-card-banner">
                   <div className="col-auto">
                     <Image
-                      src="/user-plus-purple-green.svg"
+                      src="/user-plus.svg"
                       alt="user-group"
                       height={92}
                       width={92}
@@ -166,7 +166,7 @@ export default function ModulePage() {
               <div className="row hawk-card-banner">
                 <div className="col-auto text-center">
                   <Image
-                    src="/clock-key-purple-green.svg"
+                    src="/clock-ten-key.svg"
                     alt="user-group"
                     height={92}
                     width={92}
@@ -202,7 +202,7 @@ export default function ModulePage() {
         <hr className="gradient" />
         <div className="mt-3 text-center">
           <Image
-            src="/light-bulb-purple-green.svg"
+            src="/lightbulb.svg"
             alt="user-group"
             height={32}
             width={32}
