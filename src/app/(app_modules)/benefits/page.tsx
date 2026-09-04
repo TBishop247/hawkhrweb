@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Breadcrumb, BreadcrumbItem, Alert } from "react-bootstrap";
-import "@/app/globals.css";
+import "@/app/new.css";
 import UserAvatarMenu from "@/app/components/UserAvatarMenu";
 import AppFooter from "@/app/components/AppFooter";
 

@@ -1,9 +1,7 @@
 :root {
-  --background-color: RGBA(243,243,243,1);
+  --background-color: RGBA(247,247,247,1);
   --background-color-1:RGBA(251,251,251,1);
   --background-color-2:RGBA(254,254,254,1);
-  /*--background-image:url('/app-background-light.png');
-  --background-repeat:repeat;*/
   --foreground: RGBA(23,23,23,1);
   --foreground-dim: color-mix(in srgb, var(--foreground), white 4%);
   --shadow-color: RGBA(200,200,200,1);
@@ -29,13 +27,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: RGBA(40,40,40, 1);
-    --background-color-1:RGBA(43,43,43,1);
+    --background-color: RGBA(32,32,64, 1);
+    --background-color-1:RGBA(32,32,64,1);
     --background-color-2:RGBA(55,55,55,1);
-    --background-image:url('/dark-gradient-202020-2b2b2b.png');
-    --background-repeat:repeat-x;
     --foreground: RGBA(224,224,224,1);
-    --foreground-dim: color-mix(in srgb, var(--foreground), black 4%);
+    --foreground-dim: color-mix(in srgb, var(--foreground), black 10%);
     --shadow-color: RGBA(20,20,20,1);
     --shadow: 2px 2px 5px 2px var(--shadow-color);
     --h2-color: RGBA(146, 228, 146, 1);
@@ -74,9 +70,9 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background-color: var(--background-color-1);
-  background-image: var(--background-image);
-  background-repeat: var(--background-repeat);
+  background-color:rgb(32,32,64);
+  background-image:url(/blue-gradient.png);
+  background-repeat: repeat-x;
   font-family:
     Nunito, "Lato Regular", "Segoe UI", "Open Sans", Arial, Helvetica,
     sans-serif;
@@ -113,16 +109,19 @@ h1 {
 
 h2 {
   font-weight: 400;
+  text-shadow: 1px 1px black;
 }
 
 h3 {
   font-weight: 400;
   color: var(--foreground-dim);
+  text-shadow: 1px 1px black;
 }
 
 h4 {
   font-weight: 400;
   color: var(--foreground);
+  text-shadow: 1px 1px black;
 }
 
 h5{
@@ -199,6 +198,8 @@ dd {
   border-width: 0;
   border-style: solid;
   box-shadow: 0 0 4px 2px var(--shadow-color);
+  height:500px;
+ 
 }
 
 .breadcrumb-item.active {
@@ -253,18 +254,19 @@ dd {
 }
 
 .header-bg {
-  background-color:var(--background-color-2);
-  /*background: linear-gradient(to bottom, var(--background-shift-20) 0%, var(--background-color) 50%, var(--background-shift-20) 100%);*/
+  /*background-color:RGB(34,32,54);
+  background-color:var(--background-color);*/
+  background: linear-gradient(to bottom, var(--background-shift-20) 0%, var(--background-color) 50%, var(--background-shift-20) 100%);
   border-bottom: 1px solid var(--background-shift-20);
 }
 
 .hawk-card{ /* container for subordinate content */
-  background-color: var(--background-color-1);
+  background-color: var(--background-shift-10);
   border-width:var(--card-border-width);
   border-color:var(--card-border-color);
   border-style:solid;
   border-radius: .25em;
-  /*box-shadow: 2px 2px 5px 2px var(--shadow-color);*/
+  box-shadow: 2px 2px 5px 2px var(--shadow-color);
 }
 
 .hawk-card-banner{ /* for a row */
@@ -371,3 +373,4 @@ form{
   position:absolute;
   background-color:var(--background-shift-10)
 }
+

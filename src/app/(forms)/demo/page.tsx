@@ -1,6 +1,5 @@
 "use client";
-
-import AppHeader from "@/app/components/AppHeader";
+import UserAvatarMenu from "@/app/components/UserAvatarMenu";
 import AppFooter from "@/app/components/AppFooter";
 import { useActionState } from "react";
 import { Form, Button, Alert, Spinner, Image } from "react-bootstrap";
@@ -16,7 +15,7 @@ export default function ContactForm() {
   return (
     <div>
       <header>
-        <AppHeader title="Hawk Human Resources" />
+        <UserAvatarMenu />
       </header>
       
       <div className="container mt-4 mb-0">

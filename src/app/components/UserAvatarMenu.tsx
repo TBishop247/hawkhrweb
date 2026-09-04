@@ -113,7 +113,7 @@ export default function UserAvatarMenu() {
               <Form
                 action=""
                 noValidate
-                className="login-form form p-3 text-start"
+                className="form login-form form p-3 text-start"
               >
                 <div className="row m-0">
                   <div className="col p-0 text-end">
