@@ -7,6 +7,7 @@ import AppFooter from "@/app/components/AppFooter";
 
 export default function ModulePage() {
   return (
+    
     <div>
       {/* Header */}
       <header>

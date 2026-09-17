@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Lato, Nunito } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./new.css";
+import "../../new.css";
 
 
 
@@ -26,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
+
           {children}
       </body>
     </html>

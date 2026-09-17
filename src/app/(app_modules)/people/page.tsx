@@ -52,7 +52,7 @@ export default function ShowPeople() {
           <div className="col-auto">
             <h3 className="mt-1">Features</h3>
           </div>
-          <div className="col text-end pt-2">
+          <div className="col  pt-2">
             <Image
               src="ai-sparkle-purple-green.svg"
               alt="AI Enabled"

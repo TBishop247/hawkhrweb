@@ -64,7 +64,7 @@ export default function ImageCarousel({ images }: CarouselProps) {
     }, [emblaApi, onSelect])
 
     return (
-        <div className="position-relative w-100 mx-auto overflow-hidden bg-dark rounded-4 shadow" style={{ maxWidth: '800px' }}>
+        <div className="position-relative w-100 mx-auto overflow-hidden bg-dark rounded-4 shadow" style={{ maxWidth: '400px' }}>
             {/* Viewport */}
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="d-flex">

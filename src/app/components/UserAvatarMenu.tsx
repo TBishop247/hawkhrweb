@@ -36,7 +36,7 @@ export default function UserAvatarMenu() {
           </a>
         </div>
         <div className="col-2">
-          <div className="AppHeaderTitle">
+          <div className="app-header-title">
             <span className="text-bright">Hawk</span>{" "}
             <span className="superscript text-subdued">HR</span>
           </div>

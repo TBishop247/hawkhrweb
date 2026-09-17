@@ -24,18 +24,21 @@
 
     --std-border-color: var(--background-color-30);
     --std-border-width: 1px;
-    --std-border-radius: 1em;
+    --std-border-radius: .25em;
 }  
 
 /* built-in classes */
 
 html{
     height: 100%;
+    box-sizing: border-box;
 }
 
 html,body{
     max-width: 100%vw;
+    height: 100vh;
     overflow-x: hidden;
+    margin: 0;
 }
 
 body{
@@ -49,7 +52,6 @@ body{
     font-size: 16px;
     -webkit-font-smoothing: antialised;
     -moz-osx-fon-smoothing: grayscale;
-    min-height: 100%;
 }
 
 * {
@@ -90,7 +92,18 @@ li{
     font-size: 1em !important;
 }
 
+main {
+  /* This forces the main content area to grow and fill all available space, 
+     pushing the footer down to the bottom */
+  flex: 1; 
+}
+
 /* custom classes */
+
+.app-header-title{
+    line-height:48px;
+    color: var(--foreground-color);
+}
 
 .breadcrumb-item.active{
     color: var(--foreground-color) !important;
@@ -115,7 +128,7 @@ li{
 
 .card{
     /*background-color: var(--background-color-10);*/
-    background: linear-gradient(170deg, rgba(25,25,40,0) 90%, rgba(255,255,255,.05) 100%);
+    background: linear-gradient(170deg, rgba(25,25,40,0) 95%, rgba(255,255,255,.05) 100%);
     background-color: rgba(25,25,40,.75);
     border-color:  rgba(0,0,0,0);
     box-shadow: var(--shadow);
@@ -148,6 +161,10 @@ li{
     color: rgba(146,228,146,1);
 }
 
+.color-kelly-green{
+    color: rgb(76,187,23);
+}
+
 .color-deep-purple{
     color: rgb(113,96,232);
 }
@@ -169,7 +186,8 @@ li{
 }
 
 .footer-bg{
-border-top:2px solid var(--background-color-10)
+border-top:2px solid var(--background-color-10);
+/*background-color: color-mix(in srgb, var(--background-color),black 8%);*/
 }
 
 .footer{
@@ -187,11 +205,12 @@ border-top:2px solid var(--background-color-10)
 }
 
 .form{
-    background: linear-gradient(170deg, rgba(25,25,40,0) 90%, rgba(255,255,255,.05) 100%);
-    background-color: rgba(25,25,25,1);
+    background: linear-gradient(170deg, rgba(25,25,40,0) 95%, rgba(255,255,255,.05) 100%);
+    background-color: rgba(20,20,38,1);
     border:var(--std-border-width) solid  var(--std-border-color);
     border-radius: var(--std-border-radius);
     box-shadow: var(--shadow);
+    z-index: calc(infinity); 
 }
 
 .form-error{
@@ -216,7 +235,7 @@ border-top:2px solid var(--background-color-10)
     border-radius: var(--std-border-radius);
     border-width:0;
     box-shadow: var(--shadow);
-    height: 500px;
+    height: 250px;
 }
 
 .login-form{
@@ -235,14 +254,13 @@ border-top:2px solid var(--background-color-10)
 .more-link{
     height:28px;
     width:28px;
-    background-color: var(--background-color-20);
+    background-color: rgba(0,0,128,0);
     border:1px solid rgb(0, 127,255);
     border-radius:1em;
     content:"\00b7";
     color:pink;
     display:inline-block;
     box-shadow: var(--shadow);
-
 }
 
 .profile-menu{
@@ -261,7 +279,7 @@ border-top:2px solid var(--background-color-10)
 .story-button{
     background: linear-gradient(170deg, rgba(25,25,40,0) 90%, rgba(255,255,255,.05) 100%);
     background-color: rgba(25,25,40,.75);
-    border:var(--std-border-width) solid  var(--std-border-color);
+    border:2px solid  var(--std-border-color);
     border-radius: var(--std-border-radius);
     box-shadow: var(--shadow);
 }
@@ -274,3 +292,15 @@ border-top:2px solid var(--background-color-10)
     color: var(--foreground-color-dim);
 }
 
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.page-header,
+.page-footer {
+  background-color: rgb(75 70 74);
+  color: white;
+  --padding: 20px;
+}

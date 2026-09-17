@@ -11,7 +11,7 @@ const sampleImages1 = [
   { src: '/picture-b.png', alt: 'Partially filled office1' },
   { src: '/picture-c.png', alt: 'Partially filled office2' },
   { src: '/picture-d.png', alt: 'Partially filled office3' },
-  { src: '/picture-e.png', alt: 'Full office' },
+  { src: '/picture-e.png', alt: 'Full office', loading: 'eager' },
 ]
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
     <div>
 
       <div className="container-fluid">
-        <header><div className="row mt-1"><div className="col text-end pt-1"><Image src="/avatar.svg" alt="" height={24} width={24} />{ " "}Client Login</div></div></header>
+        <div className="row mt-1"><div className="col text-end pt-1"><Image src="/avatar.svg" alt="" height={24} width={24} />{ " "}Client Login</div></div>
       </div>
         <div className="container">
         <main className="row mt-0">
@@ -38,88 +38,93 @@ export default function Home() {
           </div>
         </main>
         <div className="row">
-          <div className="col-4">
+         {/*<div className="col-2">
             <ImageCarousel images={sampleImages1} />
-            {/*<img src="office.avif" className="hero" />*/}
-          </div>
-          <div className="col-8">
-            <p className="lead">&quot;Warm bodies&quot; may keep a company alive short term, but <span className="color-kelly-green">motivated invested People</span> are the bedrock of 
+
+          </div>*/}
+          <div className="col">
+            <h4 >The Facts</h4>
+            <p className="ps-3 lead">&quot;Warm bodies&quot; may keep a company alive short term, but <u>talented, motivated, invested</u> <span className="color-kelly-green">People</span> are the bedrock of 
             every successful long-lived company.</p>
-            <p className="lead"><span className="color-red">Empty seats</span> don't bring in revenue, envision or build your next amazing product, lead projects, or inspire others.</p>
-            <p className="lead"><span className="color-red">Employee turn-over</span> is expensive.</p>
-            <p className="lead"><span className="color-kelly-green">Keep</span> the amazing team members you have and <span className="color-kelly-green">grow</span> by bringing on their co-workers and leaders through efficient, intuitive, compassionate human resource services.</p>
+            <p className="ps-3 lead"><span className="color-red">Empty seats</span> don't bring in revenue, envision or build your next amazing product, lead projects, or inspire others.</p>
+            <p className="ps-3 lead"><span className="color-red">Employee turn-over</span> is expensive.</p>            
+            <h4>The Answer</h4><p className="ps-3 lead"><span className="color-kelly-green">Keep</span> the amazing team members you have and <span className="color-kelly-green">grow</span> by bringing on their co-workers and leaders through efficient, intuitive, compassionate human resource services.</p>
+            <hr className="gradient"/>
+            <p className="ps-3">Hawk Human Resources (HR) is a state-of-the art software application that gives your HR staff the tools needed to find, on-board, and keep the most valuable resource<br/> in your company &ndash;<b> It's people.</b></p>
             
-            <h3>Hawk HR is</h3>
-            
+            <h4 className="ps-3">Hawk HR is:</h4>
             <ul>
-              <li>Intuitive;</li>
-              <li>AI enabled;</li>
-              <li>
-                Extensible - add capabilities as you need them, but not before;
-              </li>
-              <li>Efficient - ready for work in the real world, and</li>
-              <li>Certified compliant with all US Federal regulations.</li>
+              <li><i>Intuitive;</i></li>
+              <li><i>AI enabled;</i></li>
+              <li><i>Extensible - add capabilities as you need them, but not before;</i></li>
+              <li><i>Efficient - ready for work in the real world, and</i></li>
+              <li><i>Certified compliant with all US Federal regulations.</i></li>
             </ul>
-            <hr />
+            
             <div className="row">
               
-              <div className="col-4"><a href="/modules_home">
-                <div className="story-button p-3">
+              <div className="col-4">
+                <a href="/modules_home">
+                <div className="story-button">
                   <div className="row align-items-center">
-                    <div className="col-4">
+                    <div className="col-1 text-center ps-4">
                     <Image
-                      src="/eye.svg"
+                      src="/eye-blue-green.svg"
                       alt="Next.js logo"
-                      width={64}
-                      height={64}
+                      width={32}
+                        height={32}
+                        
                       />
-                      
                     </div>
-                    <div className="col-6"><h5 className="mt-0 color-light-green">Explore</h5><span className="text-secondary">the modules</span></div>
-                  <div className="col-2 text-start"><Image src="chevron-circle-right.svg" alt="explore modules" height={24} width={24} /></div>
+                    <div className="col-8 pt-3"><p className="color-kelly-green mx-4">Explore <span className="color-azure">the modules</span></p></div>
+                  <div className="col-2 text-end"><Image src="chevron-circle-right.svg" alt="explore modules" height={32} width={32} /></div>
                   </div>
-                </div></a>
+                </div>
+              </a>
                 </div>
                 
               <div className="col-4"><a href="/demo">
-                <div className="story-button p-3">
+                <div className="story-button">
                   <div className="row align-items-center">
-                    <div className="col-4">
+                    <div className="col-1 text-center ps-4">
                       <Image
-                        src="/envelope-check.svg"
+                        src="/email-blue-green.svg"
                         alt="Next.js logo"
-                        width={64}
-                        height={64}
+                        width={32}
+                        height={32}
+                        
                       />
                     </div>
-                    <div className="col-6"><h5 className="mt-0 color-deep-purple">Request</h5><span className="text-secondary">a demo</span></div>
-                    <div className="col-2 text-start"><Image src="chevron-circle-right.svg" alt="explore modules" height={24} width={24} /></div>
+                    <div className="col-8 pt-3"><p className="color-deep-purple mx-4">Request<span className="text-secondary"> a demo</span></p></div>
+                    <div className="col-3 text-center"><Image src="chevron-circle-right.svg" alt="explore modules" height={32} width={32} /></div>
                   </div>
                 </div></a>
               </div>
+
               <div className="col-4">
-                <div className="story-button p-3">
+                <a href="#">
+                <div className="story-button">
                   <div className="row align-items-center">
-                    <div className="col-4">
+                    <div className="col-1 text-center ps-4">
                       <Image
-                        src="/download.svg"
+                        src="/download-blue-green.svg"
                         alt="Next.js logo"
-                        width={64}
-                        height={64}
+                        width={32}
+                        height={32}
                       />
                     </div>
-                    <div className="col-6"><h5 className="mt-0 color-orange">Download</h5><span className="text-secondary">the PDF</span></div>
-                    <div className="col-2 text-start"><Image src="chevron-circle-right.svg" alt="explore modules" height={24} width={24} /></div>
+                      <div className="col-8 pt-3"><p className="mt-0 color-orange mx-4">Download <span className="text-secondary">the PDF</span></p></div>
+                    <div className="col-3 text-center "><Image src="chevron-circle-right.svg" alt="explore modules" height={32} width={32} /></div>
                   </div>
-
-                </div>
+                  </div></a>
               </div>
 
             </div>{ /* row */}              
          </div>
         </div>
-        <AppFooter />
+        
       </div>
+      <div className="container-fluid"><AppFooter /></div>
     </div>
   );
 }
